@@ -1,6 +1,6 @@
 ﻿/*!
 * jQuery Menu
-* version: 0.1.0
+* version: 0.1.1
 * Copyright (c) 2013 KeLeyi
 * http://keleyi.com
 */
