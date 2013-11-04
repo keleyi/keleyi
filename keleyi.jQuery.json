@@ -1,0 +1,35 @@
+﻿{
+"name": "keleyi",
+"title": "jQuery Keleyi Menu",
+"description": "jQuery Menu",
+"keywords": [
+"menu",
+"keleyi",
+"javascript",
+"jQuery"
+],
+ "version": "0.1.0",
+ "author": {
+"name": "KeLeyi",
+"url": "http://keleyi.com"
+},
+"maintainers": [
+{
+"name": "KeLeyi",
+"url": "http://keleyi.com"
+}
+],
+"licenses": [
+{
+"type": "MIT",
+"url": "https://github.com/keleyi/keleyi/blob/master/LICENSE"
+}
+],
+"homepage": "https://github.com/keleyi/keleyi",
+"docs": "https://github.com/keleyi/keleyi",
+"download": "https://github.com/keleyi/keleyi",
+"demo": "http://keleyi.com/keleyi/",
+"dependencies": {
+"jquery": ">=1.9"
+}
+}
