@@ -1,14 +1,14 @@
 ﻿{
 "name": "keleyi",
-"title": "jQuery Keleyi Menu",
-"description": "jQuery Menu",
+"title": "Keleyi(jQuery Menu)",
+"description": "A distinctive jQuery menu",
 "keywords": [
 "menu",
 "keleyi",
-"javascript",
+"UI",
 "jQuery"
 ],
- "version": "0.1.2",
+ "version": "0.1.3",
  "author": {
 "name": "KeLeyi",
 "url": "http://keleyi.com"

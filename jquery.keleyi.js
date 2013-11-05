@@ -1,6 +1,6 @@
 ﻿/*!
 * Keleyi(jQuery Menu)
-* version: 0.1.1
+* version: 0.1.3
 * Copyright (c) 2013 KeLeyi
 * http://keleyi.com
 * http://keleyi.com/keleyi/
@@ -14,6 +14,7 @@
             item_background_color_hover: '#005500',
             item_background_color: 'transparent',
             item_width: 'auto',
+            item_margin: '0px 0px 0px 10px',
             bar_height: 'auto',
             bar_position: 'fixed',
             bar_background_color: "#008000",
@@ -30,7 +31,9 @@
         , "bottom": settings.bar_bottom, "min-width": settings.width
         });
 
-        $(this).find(">li").css({ "width": settings.item_width, "background-color": settings.item_background_color });
+        $(this).parent().append("<div style='width:100%;clear:both;height:0px;'></div>");
+
+        $(this).find(">li").css({ "width": settings.item_width, "background-color": settings.item_background_color, "margin": settings.item_margin });
 
         $(this).find(">li>a").mouseover(function () {
             $(this).parent().css({ "background-color": settings.item_background_color_hover });
