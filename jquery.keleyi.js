@@ -1,8 +1,9 @@
 ﻿/*!
-* jQuery Menu
+* Keleyi(jQuery Menu)
 * version: 0.1.1
 * Copyright (c) 2013 KeLeyi
 * http://keleyi.com
+* http://keleyi.com/keleyi/
 */
 (function ($) {
     $.fn.keleyi = function (options) {
@@ -25,7 +26,7 @@
 
         $(this).wrap("<div class='keleyi-menubar'></div>");
         $(this).parent().css({ "background-color": settings.bar_background_color
-        , "height": settings.bar_heigh, "position": settings.bar_position
+        , "height": settings.bar_height, "position": settings.bar_position
         , "bottom": settings.bar_bottom, "min-width": settings.width
         });
 

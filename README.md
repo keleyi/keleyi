@@ -3,4 +3,6 @@ keleyi
 
 Keleyi jQuery Menu
 
-http://keleyi.com
+Home: http://keleyi.com
+
+Demo: http://keleyi.com/keleyi/
