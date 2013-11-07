@@ -1,0 +1,12 @@
+﻿/*!
+* Keleyi(jQuery Menu CSS)
+* version: 0.1.4
+* Copyright (c) 2013 KeLeyi
+* http://keleyi.com
+* http://keleyi.com/keleyi/
+*/
+div.keleyi-menubar{width:100%;visibility:visible;padding:0px;}
+ul.keleyi-menu{list-style-type:none;padding:0px;}
+ul.keleyi-menu  a{text-decoration:none}
+ul.keleyi-menu  a:hover{text-decoration:underline;}
+ul.keleyi-menu>li li{padding:0px;}

@@ -1,14 +1,14 @@
 ﻿{
 "name": "keleyi",
-"title": "Keleyi(jQuery Menu)",
-"description": "A distinctive jQuery menu",
+"title": "Keleyi",
+"description": "A distinctive jQuery menu.Browser Support:IE6+,Chrome,Firefox,Opera,Safari.",
 "keywords": [
 "menu",
 "keleyi",
 "UI",
 "jQuery"
 ],
- "version": "0.1.3",
+ "version": "0.1.4",
  "author": {
 "name": "KeLeyi",
 "url": "http://keleyi.com"
@@ -25,7 +25,7 @@
 "url": "https://github.com/keleyi/keleyi/blob/master/LICENSE"
 }
 ],
-"homepage": "https://github.com/keleyi/keleyi",
+"homepage": "http://keleyi.com/keleyi",
 "docs": "https://github.com/keleyi/keleyi",
 "download": "https://github.com/keleyi/keleyi",
 "demo": "http://keleyi.com/keleyi/",
