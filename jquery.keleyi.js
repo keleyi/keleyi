@@ -1,6 +1,6 @@
 ﻿/*!
 * Keleyi(jQuery Menu)
-* version: 0.1.4
+* version: 0.1.5
 * Copyright (c) 2013 KeLeyi
 * http://keleyi.com
 * http://keleyi.com/keleyi/
@@ -11,6 +11,7 @@
         var settings = $.extend({
             width: '986px',
             margin: '0px auto',
+            isAutoAddTriangle:true,
             item_background_color_hover: '#005500',
             item_background_color: 'transparent',
             item_width: 'auto',
@@ -25,6 +26,7 @@
         $(this).addClass("keleyi-menu");
         $(this).css({ "width": settings.width, "margin": settings.margin });
 
+
         $(this).wrap("<div class='keleyi-menubar'></div>");
         var k_bar = $(this).parent();
         k_bar.css({ "background-color": settings.bar_background_color
@@ -32,24 +34,30 @@
         , "bottom": settings.bar_bottom, "min-width": settings.width
         });
 
+
         if (! -[1, ] && !window.XMLHttpRequest) {
             if (k_bar.css("position") == "fixed") {
                 ie6FixedBottom(k_bar, settings.bar_bottom);
-                $(this).find("a").css("text-decoration", "none").hover(function () { $(this).css("text-decoration", "underline") }
-                , function () { $(this).css("text-decoration", "none") });
             }
         }
 
         $(this).parent().append("<div style='width:100%;clear:both;height:0px;overflow:hidden'></div>");
+
 
         $(this).find(">li").css({ "width": settings.item_width, "background-color": settings.item_background_color, "margin": settings.item_margin
         , "padding": "0px", "white-space": "nowrap", "height": "20px", "float": "left", "text-align": "center"
         , "display": "inline-block", "position": "relative"
         });
 
+
         $(this).find(">li a").css({ "color": "white", "line-height": "20px"
-        , "display": "block", "font-size": "14px", "width": "100%"
+        , "display": "block", "font-size": "14px"
         });
+
+
+        $(this).find(">li").find("a:first").css({ "width": "100%", "overflow": "hidden" });
+        if (settings.isAutoAddTriangle)
+        $(this).find(">li").has('ul').find("a:first").append("<b></b>");
 
         $(this).find(">li ul").css({ "padding": "0px", "list-style-type": "none"
         , "background-color": "transparent", "position": "absolute", "display": "none"
