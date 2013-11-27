@@ -1,14 +1,14 @@
 ﻿{
 "name": "keleyi",
 "title": "Keleyi Menu",
-"description": "A distinctive jQuery menu.Browser Support:IE6+,Chrome,Firefox,Opera,Safari.",
+"description": "A distinctive jQuery menu plugin.Very simple to use.",
 "keywords": [
 "menu",
 "keleyi",
 "UI",
 "jQuery"
 ],
- "version": "0.1.6",
+ "version": "0.1.7",
  "author": {
 "name": "KeLeyi",
 "url": "http://keleyi.com"

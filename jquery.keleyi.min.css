@@ -1,0 +1,7 @@
+﻿/*!
+* Keleyi(jQuery Menu CSS)
+* version: 0.1.7
+* Copyright (c) 2013 KeLeyi
+* http://keleyi.com
+* http://keleyi.com/keleyi/
+*/div.keleyi-menubar{width:100%;visibility:visible;padding:0}ul.keleyi-menu{list-style-type:none;padding:0}ul.keleyi-menu a{text-decoration:none}ul.keleyi-menu a:hover{text-decoration:underline}ul.keleyi-menu>li li{padding:0}ul.keleyi-menu li b{display:inline-block;width:0;height:0;border-width:4px 4px;border-style:solid;border-color:transparent transparent #fff;font-size:0;line-height:0;-moz-transition:-moz-transform .2s ease-in;-o-transition:-o-transform .2s ease-in;transition:transform .2s ease-in;vertical-align:text-top;margin-left:5px}

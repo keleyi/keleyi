@@ -1,6 +1,6 @@
 ﻿/*!
 * Keleyi(jQuery Menu)
-* version: 0.1.6
+* version: 0.1.7
 * Copyright (c) 2013 KeLeyi
 * http://keleyi.com
 * http://keleyi.com/keleyi/
@@ -21,7 +21,8 @@
             bar_background_color: "#008000",
             bar_bottom: "0px",
             mainItem_color: "white",
-            subItem_color:"white"
+            subItem_color: "white",
+            subMenuShowWay: "show"
         }, options);
 
         $(this).addClass("keleyi-menu");
@@ -49,8 +50,7 @@
 
         $(this).find(">li a").css({ "color": "white", "line-height": "20px"
         , "display": "block", "font-size": "14px"
-        });        
-
+        });
 
         if (settings.isAutoAddTriangle)
             $(this).find(">li").has('ul').find("a:first").append("<b></b>");
@@ -72,13 +72,28 @@
 
             k_ul.css({ "background-color": settings.item_background_color_hover, "top": $(this).parent().position().top - (k_ul.height())
                 , "left": "0px", "margin": "0px"
-            }).show();
+            });
             if (k_ul.width() < $(this).parent().width())
                 k_ul.width($(this).parent().width());
+            switch (settings.subMenuShowWay) {
+                case "show":
+                    k_ul.show();
+                    break;
+                case "fadeIn":
+                    k_ul.fadeIn();
+                    break;
+            }
         });
 
         $(this).find(">li").mouseleave(function () {
-            $(this).find("ul").hide();
+            switch (settings.subMenuShowWay) {
+                case "show":
+                    $(this).find("ul").hide();
+                    break;
+                case "fadeIn":
+                    $(this).find("ul").fadeOut();
+                    break;
+            }
             $(this).css("background-color", settings.item_background_color);
         });
 
