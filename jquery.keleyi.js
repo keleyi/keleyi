@@ -1,6 +1,6 @@
 ﻿/*!
 * Keleyi(jQuery Menu)
-* version: 0.1.7
+* version: 0.1.8
 * Copyright (c) 2013 KeLeyi
 * http://keleyi.com
 * http://keleyi.com/keleyi/
@@ -22,7 +22,8 @@
             bar_bottom: "0px",
             mainItem_color: "white",
             subItem_color: "white",
-            subMenuShowWay: "show"
+            subMenuShowWay: "show",
+            subMenuShowSpeed: 0
         }, options);
 
         $(this).addClass("keleyi-menu");
@@ -58,11 +59,22 @@
         $(this).find(">li").find("a:first").css({ "width": "100%", "overflow": "hidden", "color": settings.mainItem_color });
         $(this).find(">li").find("b").css({ "border-color": ("transparent transparent " + settings.mainItem_color) })
 
+
         $(this).find(">li ul").css({ "padding": "0px", "list-style-type": "none"
         , "background-color": "transparent", "position": "absolute", "display": "none"
         });
 
         $(this).find(">li").find("li a").css({ "color": settings.subItem_color });
+
+
+        $(this).find(">li").has("ul").each(function () {
+            var k_ul = $(this).find("ul");
+            k_ul.css({ "background-color": settings.item_background_color_hover, "top": $(this).position().top - (k_ul.height())
+                , "left": "0px", "margin": "0px"
+            });
+            if (k_ul.width() < $(this).width())
+                k_ul.width($(this).width());
+        });
 
         $(this).find(">li>a").mouseover(function () {
             $(this).parent().css({ "background-color": settings.item_background_color_hover });
@@ -70,31 +82,36 @@
             if (k_ul.length < 1)
                 return;
 
-            k_ul.css({ "background-color": settings.item_background_color_hover, "top": $(this).parent().position().top - (k_ul.height())
-                , "left": "0px", "margin": "0px"
-            });
-            if (k_ul.width() < $(this).parent().width())
-                k_ul.width($(this).parent().width());
             switch (settings.subMenuShowWay) {
                 case "show":
-                    k_ul.show();
+                    k_ul.show(settings.subMenuShowSpeed);
                     break;
                 case "fadeIn":
-                    k_ul.fadeIn();
+                    k_ul.fadeIn(settings.subMenuShowSpeed);
+                    break;
+                case "slideDown":
+                    k_ul.slideDown(settings.subMenuShowSpeed);
                     break;
             }
         });
 
         $(this).find(">li").mouseleave(function () {
+            $(this).css("background-color", settings.item_background_color);
+            var k_ul = $(this).find("ul");
+            if (k_ul.length < 1)
+                return;
             switch (settings.subMenuShowWay) {
                 case "show":
-                    $(this).find("ul").hide();
+                    k_ul.hide(settings.subMenuShowSpeed);
                     break;
                 case "fadeIn":
-                    $(this).find("ul").fadeOut();
+                    k_ul.fadeOut(settings.subMenuShowSpeed);
+                    break;
+                case "slideDown":
+                    k_ul.slideUp(settings.subMenuShowSpeed);
                     break;
             }
-            $(this).css("background-color", settings.item_background_color);
+
         });
 
         function ie6FixedBottom(fixedobj, bottommargin) {

@@ -1,22 +1,25 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Keleyi Menu (A jQuery Plugin)0.1.7 Demo</title>
+    <title>Keleyi Menu (A jQuery Plugin)0.1.8 Demo</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="jquery.keleyi.min.js"></script>
-    <link href="jquery.keleyi.min.css" type="text/css" rel="Stylesheet" />
-    <style>body{margin: 0px;}</style>
+    <script type="text/javascript" src="jquery.keleyi.js"></script>
+    <link href="jquery.keleyi.css" type="text/css" rel="Stylesheet" />
+    <style>
+        body
+        {
+            margin: 0px;
+        }
+    </style>
 </head>
 <body>
-    <div style="text-align:center;width:986px;margin:0px auto;">
+    <div style="text-align: center; width: 986px; margin: 0px auto;">
         <h1>
-            Keleyi</h1>
+            Keleyi Menu</h1>
         A jQuery Menu Plugin
-        <h2>Browser Support</h2>
-       Keleyi 0.1.4-0.1.7:IE6+,Chrome,Firefox,Opera,Safari<br />
-       Keleyi 0.1.3:IE8+(not support IE6),Chrome,Firefox,Opera,Safari
     </div>
-    <div style="height: 360px;background-color: #66FF66;"></div>
+    <div style="height: 360px; background-color: #66FF66;">
+    </div>
     <ul id="keleyi-menu">
         <li><a href="http://keleyi.com">Home</a></li>
         <li><a href="http://plugins.jquery.com/keleyi/">jQuery</a>
@@ -25,9 +28,14 @@
             </ul>
         </li>
         <li><a href="http://keleyi.com/keleyi/">Keleyi</a>
-        <ul><li><a href="http://keleyi.com/keleyi/help/">Help</a></li></ul>
+            <ul>
+                <li><a href="http://keleyi.com/keleyi/help/">Help</a></li></ul>
         </li>
-        <li><a href="http://keleyi.com/keleyi/demo/11.htm">Demo 11</a></li>
+        <li><a href="http://keleyi.com/keleyi/demo/11.htm">Demo 0.1.4</a>
+            <ul>
+                <li><a href="http://keleyi.com/keleyi/demo/0x1x5/">Demo 0.1.5</a></li>
+                <li><a href="http://keleyi.com/keleyi/inc/0k1k6/">Demo 0.1.6</a></li></ul>
+        </li>
         <li><a href="http://keleyi.com/keleyi/demo/">Demo</a>
             <ul>
                 <li><a href="http://keleyi.com/keleyi/demo/1.htm">Demo 1</a></li>
@@ -42,17 +50,14 @@
                 <li><a href="http://keleyi.com/keleyi/demo/10.htm">Demo 10</a></li>
             </ul>
         </li>
-        
-        <li><a href="http://keleyi.com/keleyi/demo/12.htm">Demo 12</a></li>
-        <li><a href="http://keleyi.com/keleyi/demo/0x1x5/">Demo 0.1.5</a></li>
-        <li><a href="http://keleyi.com/keleyi/inc/0k1k6/">Demo 0.1.6</a></li>
+        <li><a href="http://keleyi.com/keleyi/demo/12.htm">List Demo</a></li>
+        <li><a href="http://keleyi.com/keleyi/inc/0k1k7/">Demo 0.1.7</a></li>
     </ul>
-    <div style="height: 900px;visibility: visible; background-color: Olive"></div>
+    <div style="height: 900px; visibility: visible; background-color: Olive">
+    </div>
     <script type="text/javascript">
-        $("#keleyi-menu").keleyi({"width":"800px", "item_width": "90px","bar_position":"relative"
-                                   , "margin": "0px auto", "item_margin": "0px 2px 0px 0px", "mainItem_color": "#ff0000", "subItem_color": "#008800"
-                                   , "bar_background_color": "#cc3366","item_background_color":"white", "item_background_color_hover": "#eeeeee"
-                                   ,"subMenuShowWay":"fadeIn"
+        $("#keleyi-menu").keleyi({ "width": "800px", "item_width": "90px", "bar_position": "relative"
+                                   , "margin": "0px auto", "subMenuShowWay": "slideDown", "subMenuShowSpeed": 100
         });
     </script>
 </body>
