@@ -1,6 +1,6 @@
 ﻿/*!
 * Keleyi(jQuery Menu)
-* version: 0.1.8
+* version: 0.1.9
 * Copyright (c) 2013 KeLeyi
 * http://keleyi.com
 * http://keleyi.com/keleyi/
@@ -40,9 +40,10 @@
             if (k_bar.css("position") == "fixed") {
                 ie6FixedBottom(k_bar, settings.bar_bottom);
             }
+            $(this).find("ul li a").css({ "height": "1%" });
         }
 
-        $(this).parent().append("<div style='width:100%;clear:both;height:0px;overflow:hidden'></div>");
+        k_bar.append("<div style='width:100%;clear:both;height:0px;overflow:hidden'></div>");
 
         $(this).find(">li").css({ "width": settings.item_width, "background-color": settings.item_background_color, "margin": settings.item_margin
         , "padding": "0px", "white-space": "nowrap", "height": "20px", "float": "left", "text-align": "center"
@@ -52,6 +53,7 @@
         $(this).find(">li a").css({ "color": "white", "line-height": "20px"
         , "display": "block", "font-size": "14px"
         });
+
 
         if (settings.isAutoAddTriangle)
             $(this).find(">li").has('ul').find("a:first").append("<b></b>");
@@ -66,7 +68,6 @@
 
         $(this).find(">li").find("li a").css({ "color": settings.subItem_color });
 
-
         $(this).find(">li").has("ul").each(function () {
             var k_ul = $(this).find("ul");
             k_ul.css({ "background-color": settings.item_background_color_hover, "top": $(this).position().top - (k_ul.height())
@@ -76,20 +77,21 @@
                 k_ul.width($(this).width());
         });
 
+        var k_subMenuShowWay = settings.subMenuShowWay.toLowerCase();
         $(this).find(">li>a").mouseover(function () {
             $(this).parent().css({ "background-color": settings.item_background_color_hover });
             var k_ul = $(this).parent().find("ul");
             if (k_ul.length < 1)
                 return;
 
-            switch (settings.subMenuShowWay) {
+            switch (k_subMenuShowWay) {
                 case "show":
                     k_ul.show(settings.subMenuShowSpeed);
                     break;
-                case "fadeIn":
+                case "fadein":
                     k_ul.fadeIn(settings.subMenuShowSpeed);
                     break;
-                case "slideDown":
+                case "slidedown":
                     k_ul.slideDown(settings.subMenuShowSpeed);
                     break;
             }
@@ -100,14 +102,14 @@
             var k_ul = $(this).find("ul");
             if (k_ul.length < 1)
                 return;
-            switch (settings.subMenuShowWay) {
+            switch (k_subMenuShowWay) {
                 case "show":
                     k_ul.hide(settings.subMenuShowSpeed);
                     break;
-                case "fadeIn":
+                case "fadein":
                     k_ul.fadeOut(settings.subMenuShowSpeed);
                     break;
-                case "slideDown":
+                case "slidedown":
                     k_ul.slideUp(settings.subMenuShowSpeed);
                     break;
             }
